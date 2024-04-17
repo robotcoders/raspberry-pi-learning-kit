@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.2.2 Thermistor &mdash; Super Starter Kit 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.2.3 DHT-11" href="2.2.3%20DHT-11.html" />
+    <link rel="prev" title="2.2.1 Photoresistor" href="2.2.1%20Photoresistor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Super Starter Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparation/preparation.html">Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Output (for Pi 4)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2_input.html">2 Input (for Pi 4)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1.1%20Button.html">2.1.1 Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2%20Joystick.html">2.1.2Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3%20Tilt%20Switch.html">2.1.3 Tilt Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.4%20Potentiometer.html">2.1.4 Potentiometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.5%20Keypad.html">2.1.5 Keypad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1%20Photoresistor.html">2.2.1 Photoresistor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2.2 Thermistor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect">Connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for-c-language">For  C  Language</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon">Phenomenon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.3%20DHT-11.html">2.2.3 DHT-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.4%20PIR.html">2.2.4 PIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.5%20Ultrasonic%20Sensor%20Module.html">2.2.5 Ultrasonic Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.6%20GY521%20Module.html">2.2.6 GY521 Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Extension (for Pi 4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/appendix.html">Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Super Starter Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="2_input.html">2 Input (for Pi 4)</a></li>
+      <li class="breadcrumb-item active">2.2.2 Thermistor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/2.2.2 Thermistor.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="thermistor">
+<h1>2.2.2 Thermistor<a class="headerlink" href="#thermistor" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Just like photoresistor can sense light, thermistor is a temperature sensitive electronic device that can be used for realizing functions of temperature control, such as making a heat alarm.</p>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h2>
+<p><img alt="" src="_images/list_2.2.2_thermistor.png" /></p>
+<p>A thermistor is a thermally sensitive resistor that exhibits a precise and predictable change in resistance proportional to small changes in temperature. How much its resistance will change is dependent upon its unique composition. Thermistors are the parts of a larger group of passive components. And unlike their active component counterparts, passive devices are incapable of providing power gain, or amplification to a circuit.</p>
+<p>Thermistor is a sensitive element, and it has two types: Negative Temperature Coefficient (NTC) and Positive Temperature Coefficient (PTC), also known as NTC and PTC. Its resistance varies significantly with temperature. The resistance of PTC thermistor increases with temperature ,while the condition of NTC is opposite to the former In this experiment we use NTC.</p>
+<p><img alt="" src="_images/image325.png" /></p>
+<p>The principle is that the resistance of the NTC thermistor changes with the temperature of the outer environment. It detects the real-time temperature of the environment. When the temperature gets higher, the resistance of the thermistor decreases. Then the voltage data is converted to digital quantities by the A/D adapter. The temperature in Celsius or Fahrenheit is output via programming.</p>
+<p>In this experiment, a thermistor and a 10k pull-up resistor are used. Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius.</p>
+<p>Here is the relation between the resistance and temperature:</p>
+<p>RT =RN expB(1/TK – 1/TN)</p>
+<p><strong>RT</strong> is the resistance of the NTC thermistor when the temperature is <strong>TK</strong>.</p>
+<p><strong>RN</strong> is the resistance of the NTC thermistor under the rated temperature <strong>TN</strong>. Here, the numerical value of <strong>RN</strong> is 10k.</p>
+<p><strong>TK</strong> is a Kelvin temperature and the unit is K. Here, the numerical value of <strong>TK</strong>is 273.15 + degree Celsius.</p>
+<p><strong>TN</strong> is a rated Kelvin temperature; the unit is K too. Here, the numerical value of <strong>TN</strong> is 273.15+25.</p>
+<p>And <strong>B</strong>(beta), the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value 3950.</p>
+<p><strong>exp</strong> is the abbreviation of exponential, and the base number e is a natural number and equals 2.7 approximately.</p>
+<p>Convert this formula TK=1/(ln(RT/RN)/B+1/TN) to get Kelvin temperature that minus 273.15 equals degree Celsius.</p>
+<p>This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.</p>
+</section>
+<section id="connect">
+<h2>Connect<a class="headerlink" href="#connect" title="Link to this heading"></a></h2>
+<p><img alt="" src="_images/image324.png" /></p>
+<p><img alt="" src="_images/image202.png" /></p>
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<section id="for-c-language">
+<h3>For  C  Language<a class="headerlink" href="#for-c-language" title="Link to this heading"></a></h3>
+<p>Go to the code folder compile and run.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/super-starter-kit-for-raspberry-pi/c/2.2.2/
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>g++<span class="w"> </span>Thermometer.cpp<span class="w"> </span>-lwiringPi<span class="w"> </span>-lADCDevice
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>./a.out
+</pre></div>
+</div>
+<p>With the code run, the thermistor detects ambient temperature which will be printed on the screen once it finishes the program calculation.</p>
+<p>This is the complete code</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wiringPi.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ADCDevice.hpp&gt;</span>
+
+<span class="n">ADCDevice</span><span class="w"> </span><span class="o">*</span><span class="n">adc</span><span class="p">;</span><span class="w">  </span><span class="c1">// Define an ADC Device class object</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ADCDevice</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Program is starting ... </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x4d</span><span class="p">)){</span><span class="w">    </span><span class="c1">// Detect the pcf8591.</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">adc</span><span class="p">;</span><span class="w">                </span><span class="c1">// Free previously pointed memory</span>
+<span class="w">        </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PCF8591</span><span class="p">();</span><span class="w">    </span><span class="c1">// If detected, create an instance of PCF8591.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x48</span><span class="p">)){</span><span class="c1">// Detect the ads7830</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">adc</span><span class="p">;</span><span class="w">               </span><span class="c1">// Free previously pointed memory</span>
+<span class="w">        </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ADS7830</span><span class="p">();</span><span class="w">      </span><span class="c1">// If detected, create an instance of ADS7830.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;No correct I2C address found, </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="w">        </span><span class="s">&quot;Please use command &#39;i2cdetect -y 1&#39; to check the I2C address! </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="w">        </span><span class="s">&quot;Program Exit. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Program is starting ... </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">adcValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">//read analog value A0 pin    </span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">adcValue</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">255.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3.3</span><span class="p">;</span><span class="w">    </span><span class="c1">// calculate voltage    </span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">Rt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">3.3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">voltage</span><span class="p">);</span><span class="w">        </span><span class="c1">//calculate resistance value of thermistor</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">tempK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mf">273.15</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mf">3950.0</span><span class="p">);</span><span class="w"> </span><span class="c1">//calculate temperature (Kelvin)</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">tempC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempK</span><span class="w"> </span><span class="mf">-273.15</span><span class="p">;</span><span class="w">        </span><span class="c1">//calculate temperature (Celsius)</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;ADC value : %d  ,</span><span class="se">\t</span><span class="s">Voltage : %.2fV, </span><span class="se">\t</span><span class="s">Temperature : %.2fC</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">adcValue</span><span class="p">,</span><span class="n">voltage</span><span class="p">,</span><span class="n">tempC</span><span class="p">);</span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Python</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">ADCDevice</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">adc</span> <span class="o">=</span> <span class="n">ADCDevice</span><span class="p">()</span> <span class="c1"># Define an ADCDevice class object</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">adc</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">.</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x4d</span><span class="p">)):</span> <span class="c1"># Detect the pcf8591.</span>
+        <span class="n">adc</span> <span class="o">=</span> <span class="n">PCF8591</span><span class="p">()</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">adc</span><span class="o">.</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x48</span><span class="p">)):</span> <span class="c1"># Detect the ads7830</span>
+        <span class="n">adc</span> <span class="o">=</span> <span class="n">ADS7830</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No correct I2C address found, </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;Please use command &#39;i2cdetect -y 1&#39; to check the I2C address! </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;Program Exit. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        <span class="c1"># read ADC value A0 pin</span>
+        <span class="n">voltage</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="mf">255.0</span> <span class="o">*</span> <span class="mf">3.3</span>        <span class="c1"># calculate voltage</span>
+        <span class="n">Rt</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">voltage</span> <span class="o">/</span> <span class="p">(</span><span class="mf">3.3</span> <span class="o">-</span> <span class="n">voltage</span><span class="p">)</span>    <span class="c1"># calculate resistance value of thermistor</span>
+        <span class="n">tempK</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mf">273.15</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Rt</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mf">3950.0</span><span class="p">)</span> <span class="c1"># calculate temperature (Kelvin)</span>
+        <span class="n">tempC</span> <span class="o">=</span> <span class="n">tempK</span> <span class="o">-</span><span class="mf">273.15</span>        <span class="c1"># calculate temperature (Celsius)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ADC Value : </span><span class="si">%d</span><span class="s1">, Voltage : </span><span class="si">%.2f</span><span class="s1">, Temperature : </span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">voltage</span><span class="p">,</span><span class="n">tempC</span><span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">destroy</span><span class="p">():</span>
+    <span class="n">adc</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+    
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>  <span class="c1"># Program entrance</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Program is starting ... &#39;</span><span class="p">)</span>
+    <span class="n">setup</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">loop</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span> <span class="c1"># Press ctrl-c to end the program.</span>
+        <span class="n">destroy</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="phenomenon">
+<h2>Phenomenon<a class="headerlink" href="#phenomenon" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2.2.1%20Photoresistor.html" class="btn btn-neutral float-left" title="2.2.1 Photoresistor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2.2.3%20DHT-11.html" class="btn btn-neutral float-right" title="2.2.3 DHT-11" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Bot.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

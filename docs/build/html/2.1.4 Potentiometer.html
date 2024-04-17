@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1.4 Potentiometer &mdash; Super Starter Kit 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.1.5 Keypad" href="2.1.5%20Keypad.html" />
+    <link rel="prev" title="2.1.3 Tilt Switch" href="2.1.3%20Tilt%20Switch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Super Starter Kit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparation/preparation.html">Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_output.html">1 Output (for Pi 4)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2_input.html">2 Input (for Pi 4)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1.1%20Button.html">2.1.1 Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2%20Joystick.html">2.1.2Joystick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3%20Tilt%20Switch.html">2.1.3 Tilt Switch</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1.4 Potentiometer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect">Connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#for-c-language">For  C  Language</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#phenomenon">Phenomenon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.5%20Keypad.html">2.1.5 Keypad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1%20Photoresistor.html">2.2.1 Photoresistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.2%20Thermistor.html">2.2.2 Thermistor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.3%20DHT-11.html">2.2.3 DHT-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.4%20PIR.html">2.2.4 PIR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.5%20Ultrasonic%20Sensor%20Module.html">2.2.5 Ultrasonic Sensor Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.6%20GY521%20Module.html">2.2.6 GY521 Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_extension.html">3 Extension (for Pi 4)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/appendix.html">Appendix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Super Starter Kit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="2_input.html">2 Input (for Pi 4)</a></li>
+      <li class="breadcrumb-item active">2.1.4 Potentiometer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/2.1.4 Potentiometer.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="potentiometer">
+<h1>2.1.4 Potentiometer<a class="headerlink" href="#potentiometer" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The ADC function can be used to convert analog signals to digital signals, and in this experiment, ADC0834 is used to get the function involving ADC. Here, we implement this process by using potentiometer. Potentiometer changes the physical quantity – voltage, which is converted by the ADC function.</p>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Link to this heading"></a></h2>
+<p><img alt="" src="_images/list_2.1.4_potentiometer.png" /></p>
+<p><strong>ADC0834</strong></p>
+<p>ADC0834 is an 8-bit successive approximation analog-to-digital converter that is equipped with an input-configurable multichannel multi-plexer and serial input/output. The serial input/output is configured to interface with standard shift registers or microprocessors.</p>
+<p><img alt="" src="_images/image309.png" /></p>
+<p><strong>Sequence of Operation</strong></p>
+<p>A conversion is initiated by setting CS low, which enables all logic circuits. CS must be held low for the complete conversion process. A clock input is then received from the processor. On each low-to-high transition of the clock input, the data on DI is clocked into the multiplexer address shift register. The first logic high on the input is the start bit. A 3- to 4-bit assignment word follows the start bit. On each successive low-to-high transition of the clock input, the start bit and assignment word are shifted through the shift register. When the start bit is shifted into the start location of the multiplexer register, the input channel is selected and conversion starts. The SAR Statu output (SARS) goes high to indicate that a conversion is in progress, and DI to the multiplexer shift register is disabled the duration of the conversion.</p>
+<p>An interval of one clock period is automatically inserted to allow the selected multiplexed channel to settle. The data output DO comes out of the high-impedance state and provides a leading low for this one clock period of multiplexer settling time. The SAR comparator compares successive outputs from the resistive ladder with the incoming analog signal. The comparator output indicates whether the analog input is greater than or less than the resistive ladder output. As the conversion proceeds, conversion data is simultaneously output from the DO output pin, with the most significant bit (MSB) first.</p>
+<p>After eight clock periods, the conversion is complete and the SARS output goes low. Finally outputs the least-significant-bit-first data after the MSB-first data stream.</p>
+<p><img alt="" src="_images/image175.png" /></p>
+<p><strong>ADC0834 MUX ADDRESS CONTROL LOGIC TABLE</strong></p>
+<p><img alt="" src="_images/image176.png" /></p>
+<p><strong>Potentiometer</strong></p>
+<p>Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. Potentiometer usually consists of resistor and movable brush. When the brush is moving along the resistor, there is a certain resistance or voltage output depending on the displacement.</p>
+<p><img alt="" src="_images/image310.png" /></p>
+<p>The functions of the potentiometer in the circuit are as follows:</p>
+<p>Serving as a voltage divider</p>
+<p>Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor. At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the distance it moves.</p>
+</section>
+<section id="connect">
+<h2>Connect<a class="headerlink" href="#connect" title="Link to this heading"></a></h2>
+<p><img alt="" src="_images/image312.png" /></p>
+<p><img alt="" src="_images/image180.png" /></p>
+<blockquote>
+<div><p>[!NOTE]</p>
+<p>Please place the chip by referring to the corresponding position depicted in the picture. Note that the grooves on the chip should be on the left when it is placed.</p>
+</div></blockquote>
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading"></a></h2>
+<section id="for-c-language">
+<h3>For  C  Language<a class="headerlink" href="#for-c-language" title="Link to this heading"></a></h3>
+<p>Go to the code folder compile and run.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="nb">super</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="mf">2.1.4</span><span class="o">/</span>
+<span class="n">g</span><span class="o">++</span> <span class="mf">2.1.4</span><span class="n">_Potentiometer</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">lwiringPi</span> <span class="o">-</span><span class="n">lADCDevice</span>
+<span class="n">sudo</span> <span class="o">./</span><span class="n">a</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<p>After the code runs, rotate the knob on the potentiometer, the intensity of LED will change accordingly.</p>
+<p>This is the complete code</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wiringPi.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;softPwm.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ADCDevice.hpp&gt;</span>
+
+<span class="cp">#define ledPin 0</span>
+
+<span class="n">ADCDevice</span><span class="w"> </span><span class="o">*</span><span class="n">adc</span><span class="p">;</span><span class="w">  </span><span class="c1">// Define an ADC Device class object</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">ADCDevice</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Program is starting ... </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x4c</span><span class="p">)){</span><span class="w">    </span><span class="c1">// Detect the pcf8591.</span>
+<span class="w">        </span><span class="n">delete</span><span class="w"> </span><span class="n">adc</span><span class="p">;</span><span class="w">                </span><span class="c1">// Free previously pointed memory</span>
+<span class="w">        </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">PCF8591</span><span class="p">();</span><span class="w">    </span><span class="c1">// If detected, create an instance of PCF8591.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x48</span><span class="p">)){</span><span class="c1">// Detect the ads7830</span>
+<span class="w">        </span><span class="n">delete</span><span class="w"> </span><span class="n">adc</span><span class="p">;</span><span class="w">               </span><span class="c1">// Free previously pointed memory</span>
+<span class="w">        </span><span class="n">adc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">ADS7830</span><span class="p">();</span><span class="w">      </span><span class="c1">// If detected, create an instance of ADS7830.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;No correct I2C address found, </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="w">        </span><span class="s">&quot;Please use command &#39;i2cdetect -y 1&#39; to check the I2C address! </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="w">        </span><span class="s">&quot;Program Exit. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">wiringPiSetup</span><span class="p">();</span>
+<span class="w">    </span><span class="n">softPwmCreate</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">adcValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adc</span><span class="o">-&gt;</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">    </span><span class="c1">//read analog value of A0 pin</span>
+<span class="w">        </span><span class="n">softPwmWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="n">adcValue</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="mi">255</span><span class="p">);</span><span class="w">    </span><span class="c1">// Mapping to PWM duty cycle</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">adcValue</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">255.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3.3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Calculate voltage</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;ADC value : %d  ,</span><span class="se">\t</span><span class="s">Voltage : %.2fV</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">adcValue</span><span class="p">,</span><span class="n">voltage</span><span class="p">);</span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+<p>For Python Users</p>
+<p>Open the code file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="nb">super</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">kit</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">raspberry</span><span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="n">Python</span>
+</pre></div>
+</div>
+<p>Run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span> <span class="mf">2.1.4</span><span class="n">_Potentiometer</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>After the code runs, rotate the knob on the potentiometer, the intensity of LED will change accordingly.</p>
+<p>This is the complete code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="nn">GPIO</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">ADCDevice</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">ledPin</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">adc</span> <span class="o">=</span> <span class="n">ADCDevice</span><span class="p">()</span> <span class="c1"># Define an ADCDevice class object</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">adc</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">adc</span><span class="o">.</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x4d</span><span class="p">)):</span> <span class="c1"># Detect the pcf8591.</span>
+        <span class="n">adc</span> <span class="o">=</span> <span class="n">PCF8591</span><span class="p">()</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">adc</span><span class="o">.</span><span class="n">detectI2C</span><span class="p">(</span><span class="mh">0x48</span><span class="p">)):</span> <span class="c1"># Detect the ads7830</span>
+        <span class="n">adc</span> <span class="o">=</span> <span class="n">ADS7830</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No correct I2C address found, </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;Please use command &#39;i2cdetect -y 1&#39; to check the I2C address! </span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;Program Exit. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">p</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="o">.</span><span class="n">BOARD</span><span class="p">)</span>
+    <span class="n">GPIO</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="n">GPIO</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">GPIO</span><span class="o">.</span><span class="n">PWM</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># read the ADC value of channel 0</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">ChangeDutyCycle</span><span class="p">(</span><span class="n">value</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>        <span class="c1"># Mapping to PWM duty cycle</span>
+        <span class="n">voltage</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="mf">255.0</span> <span class="o">*</span> <span class="mf">3.3</span>  <span class="c1"># calculate the voltage value</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;ADC Value : </span><span class="si">%d</span><span class="s1">, Voltage : </span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">voltage</span><span class="p">))</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="phenomenon">
+<h2>Phenomenon<a class="headerlink" href="#phenomenon" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2.1.3%20Tilt%20Switch.html" class="btn btn-neutral float-left" title="2.1.3 Tilt Switch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2.1.5%20Keypad.html" class="btn btn-neutral float-right" title="2.1.5 Keypad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Bot.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
